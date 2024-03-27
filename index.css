@@ -1,0 +1,61 @@
+body {
+    max-width: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif ;
+    background-image: url('./img/background_map_main.jpg') ;
+    max-height: 100%;
+
+}
+.container{
+    margin: 0;
+    padding: 0; 
+}
+
+.cards-row{
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 3;
+}
+.card{
+    display: flex;    
+    width: 35%;
+    text-align: center;
+    height: 400px;
+    border: 2px solid rgb(21, 47, 194);  
+}
+.top{
+    border-top: none;
+
+}
+.bottom{
+    border-bottom: none;
+}
+.left{
+    border-left: none;
+}
+.right{
+    border-right: none;
+}
+
+.text{
+    margin: auto;
+}
+.main-text{
+    color:white;    
+  /* Делает само поле ввода прозрачным */
+    background: transparent;
+  /* Убираем рамки вокруг поля ввода */
+    border: none;
+    font-size: x-large;
+
+}
+
+.footer{
+    display: flex;
+    background: black;
+    justify-content: center;
+    height: 80px;
+    padding:20px;
+}
+.footer-text{
+    color: white;
+}
