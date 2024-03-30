@@ -47,26 +47,31 @@ body {
     font-size: x-large;
 
 }
-
-.but-div-n-a{
+.but-div{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background-color: ghostwhite; 
+    overflow: auto;
+}
+
+.b-n-a{
     margin-top:1250px;
     margin-left: 13px;
     width: 300px;
-    height:330px;
-    background-color: ghostwhite;    
+    height:330px;  
 }
-.but-div-eu{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.b-eu{
     width: 200px;
     height:300px;
-    background-color: ghostwhite;   
     min-height: 750px;
-    overflow: auto;
+    /* overflow: auto; */
+}
+.b-s-a{
+    margin-top:1250px;
+    margin-left: 13px;
+    width: 300px;
+    height:330px;  
 }
 
 .js-but{
@@ -75,25 +80,24 @@ body {
     background: transparent;
     border: none;
     color: black;
-    font-size: small;
+    font-size: large;
 }
-.text-div-n-a{
-    margin-left:1200px;
+.text-div{
     width:100%;
     height:100%;
     position: fixed;
     overflow: auto;
-    margin-top:-1250px;
     background-color: rgb(246, 249, 205);
-    width: 100%;
+}
+.n-a{
+    margin-left:1200px;
+    margin-top:-1250px;
 }
 
-.text-div-eu{
+.eu{
     margin-left:1300px;
-    width:100%;
-    height:100%;
-    position: fixed;
-    overflow: auto;
-    background-color: rgb(246, 249, 205);
-    width: 100%;
+}
+.s-a{
+    margin-left:1200px;
+    margin-top:-1250px;
 }

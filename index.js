@@ -5,10 +5,10 @@ $(function(){
       $('body').css('backgroundImage', 'url("./img/n-america.jpg")')
       $('body').css('height','350px')
       //фон
-      $('body').append('<div class="text-div-n-a"></div>')
+      $('body').append('<div class="text-div n-a"></div>')
 
 
-      $('body').append('<div class="but-div-n-a"></div>')
+      $('body').append('<div class="but-div b-n-a"></div>')
       let countries = [
                        {name: "США", area:"9 519 431 км2", lang: "Английский", capCity: "Вашигтон"},
                        {name: "Канада", area:"9 984 670 км2", lang: "Английский, Французкий", capCity: "Оттава"},
@@ -27,25 +27,21 @@ $(function(){
       
       // Создаю такое коичество кнопок, которое равняется количеству стран в массиве 
       for (let i = 0; i < countries.length; i++) {
-        let button = $('<button class="js-but">').appendTo('.but-div-n-a')
+        let button = $('<button class="js-but">').appendTo('.but-div')
         button.text(countries[i].name)
         button.on('click', (function(country) {
           return function() {
-            let cName = $('<h3>').appendTo('.text-div-n-a')
+            let cName = $('<h3>').appendTo('.text-div')
             cName.text("Страна: "  + country.name)
-            let cCapCity = $('<p>').appendTo('.text-div-n-a')
+            let cCapCity = $('<p>').appendTo('.text-div')
             cCapCity.text("Столица: " + country.capCity)            
-            let cArea = $('<p>').appendTo('.text-div-n-a')
+            let cArea = $('<p>').appendTo('.text-div')
             cArea.text("Площадь: " + country.area) 
-            let cLang = $('<p>').appendTo('.text-div-n-a')
+            let cLang = $('<p>').appendTo('.text-div')
             cLang.text("Язык(и): " + country.lang)
           }
         })(countries[i]))
       }
-      // Позиционировать кнопки
-      $('input').css({
-        'margin':'5px'
-      })
     })
     // 2 кнопка(Европа)
     $( "#but-2" ).click(function(){ 
@@ -53,9 +49,9 @@ $(function(){
       $('body').css('backgroundImage', 'url("./img/eu.png")')
       $('body').css('height','1060px')
       // Побелить фон
-      $('body').append('<div class="text-div-eu"></div>')
+      $('body').append('<div class="text-div eu"></div>')
 
-      $('body').append('<div class="but-div-eu"></div>')
+      $('body').append('<div class="but-div b-eu"></div>')
       let countries = [
                        {name: "Россия", area:"17 233 900 км2", lang: "Русский(множество других в разных частях РФ)", capCity: "Москва"},
                        {name: "Германия", area:"375 000 км2", lang: "Немецкий", capCity: "Берлин"},
@@ -105,17 +101,61 @@ $(function(){
       
       // Создаю такое коичество кнопок, которое равняется количеству стран в массиве 
       for (let i = 0; i < countries.length; i++) {
-        let button = $('<button class="js-but">').appendTo('.but-div-eu')
+        let button = $('<button class="js-but">').appendTo('.but-div')
         button.text(countries[i].name)
         button.on('click', (function(country) {
           return function() {
-            let cName = $('<h3>').appendTo('.text-div-eu')
+            let cName = $('<h3>').appendTo('.text-div')
             cName.text("Страна: "  + country.name)
-            let cCapCity = $('<p>').appendTo('.text-div-eu')
+            let cCapCity = $('<p>').appendTo('.text-div')
             cCapCity.text("Столица: " + country.capCity)            
-            let cArea = $('<p>').appendTo('.text-div-eu')
+            let cArea = $('<p>').appendTo('.text-div')
             cArea.text("Площадь: " + country.area) 
-            let cLang = $('<p>').appendTo('.text-div-eu')
+            let cLang = $('<p>').appendTo('.text-div')
+            cLang.text("Язык(и): " + country.lang)
+          }
+        })(countries[i]))
+      }
+    })
+    // 4 кнопка(Южная Америка)
+    $( "#but-4" ).click(function(){
+      $( ".cards-row" ).toggle()
+      $('body').css('backgroundImage', 'url("./img/s-america.jpg")')
+      $('body').css('height','350px')
+      //фон
+      $('body').append('<div class="text-div s-a"></div>')
+      $('body').append('<div class="but-div b-s-a"></div>')
+      let countries = [
+                       {name: "Аргентина", area:"2 766 890 км2", lang: "Испанский", capCity: "Буэнос-Айрес"},
+                       {name: "Бразилия", area:"8 514 877 км2", lang: "Португальский", capCity: "Бразилиа"},
+                       {name: "Боливия", area:"1 098 581 км2", lang: "Испанский, кечуа, аймара,и еще 34 языка", capCity: "Ла-Пас, Сукре	"},
+                       {name: "Венесуэла", area:"916 445 км2", lang: "Испанский", capCity: "Каракас"},
+                       {name: "Гайана", area:"214 970 км2", lang: "Английский", capCity: "Джорджтаун"},
+                       {name: "Колумбия", area:"1 138 910 км2", lang: "Испанский", capCity: "Санта-Фе-Де-Богота"},
+                       {name: "Парагвай", area: "406 752 км2", lang: "Испанский,гуарани", capCity: "Асунсьон"},
+                       {name: "Перу", area:"1 285 220 км2", lang: "Испанский,кечуа", capCity: "Лима"},
+                       {name: "Суринам", area: "163 270 км2", lang: "Нидердандский", capCity: "Парамарибо"},
+                       {name: "Уругвай", area:"176 220 км2", lang: "Испанский", capCity: "Монтевидео"},
+                       {name: "Чили", area:"756 950 км2", lang: "Испанский", capCity: "Сантьяго"},
+                       {name: "Эквадор", area:"283 560 км2", lang: "Испанский", capCity: "Кито"},
+                       {name: "Французская Гвиана", area:"86 504 км2", lang: "Французский", capCity: "Кайенна"},
+                       {name: "Гренада", area:"344 км2", lang: "Английский", capCity: "Сент-Джорс"},
+                       {name: "Тринидад и Тобаго", area:"5 128  км2", lang: "Английский", capCity: "Порт-Оф-Спейн"}]
+                       
+      
+      // Создаю такое коичество кнопок, которое равняется количеству стран в массиве 
+      for (let i = 0; i < countries.length; i++) {
+        let button = $('<button class="js-but">').appendTo('.but-div')
+        button.text(countries[i].name)
+        button.on('click', (function(country) {
+          return function() {
+            let cName = $('<h3>').appendTo('.text-div')
+            cName.text("Страна: "  + country.name)
+            let cCapCity = $('<p>').appendTo('.text-div')
+            cCapCity.text("Столица: " + country.capCity)            
+            let cArea = $('<p>').appendTo('.text-div')
+            cArea.text("Площадь: " + country.area) 
+            let cLang = $('<p>').appendTo('.text-div')
             cLang.text("Язык(и): " + country.lang)
           }
         })(countries[i]))
