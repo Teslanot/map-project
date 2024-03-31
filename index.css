@@ -64,12 +64,17 @@ body {
 .b-eu{
     width: 200px;
     height:300px;
-    min-height: 750px;
     /* overflow: auto; */
 }
 .b-s-a{
     margin-top:1250px;
     margin-left: 13px;
+    width: 300px;
+    height:330px;  
+}
+.b-af{
+    margin-top:1250px;
+    margin-left: 885px;
     width: 300px;
     height:330px;  
 }
@@ -98,6 +103,10 @@ body {
     margin-left:1300px;
 }
 .s-a{
+    margin-left:1200px;
+    margin-top:-1250px;
+}
+.af{
     margin-left:1200px;
     margin-top:-1250px;
 }

@@ -53,6 +53,38 @@ $(function(){
 
       $('body').append('<div class="but-div b-eu"></div>')
       let countries = [
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
                        {name: "Россия", area:"17 233 900 км2", lang: "Русский(множество других в разных частях РФ)", capCity: "Москва"},
                        {name: "Германия", area:"375 000 км2", lang: "Немецкий", capCity: "Берлин"},
                        {name: "Украина", area:"504 000 км2", lang: "Украинский", capCity: "Киев"},
@@ -141,6 +173,130 @@ $(function(){
                        {name: "Французская Гвиана", area:"86 504 км2", lang: "Французский", capCity: "Кайенна"},
                        {name: "Гренада", area:"344 км2", lang: "Английский", capCity: "Сент-Джорс"},
                        {name: "Тринидад и Тобаго", area:"5 128  км2", lang: "Английский", capCity: "Порт-Оф-Спейн"}]
+                       
+      
+      // Создаю такое коичество кнопок, которое равняется количеству стран в массиве 
+      for (let i = 0; i < countries.length; i++) {
+        let button = $('<button class="js-but">').appendTo('.but-div')
+        button.text(countries[i].name)
+        button.on('click', (function(country) {
+          return function() {
+            let cName = $('<h3>').appendTo('.text-div')
+            cName.text("Страна: "  + country.name)
+            let cCapCity = $('<p>').appendTo('.text-div')
+            cCapCity.text("Столица: " + country.capCity)            
+            let cArea = $('<p>').appendTo('.text-div')
+            cArea.text("Площадь: " + country.area) 
+            let cLang = $('<p>').appendTo('.text-div')
+            cLang.text("Язык(и): " + country.lang)
+          }
+        })(countries[i]))
+      }
+    })
+    // 5 кнопка(Африка)
+    $( "#but-5" ).click(function(){
+      $( ".cards-row" ).toggle()
+      $('body').css('backgroundImage', 'url("./img/africa.jpg")')
+      $('body').css('height','350px')
+      //фон
+      $('body').append('<div class="text-div af"></div>')
+      $('body').append('<div class="but-div b-af"></div>')
+      let countries = [
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "Алжир", area:"2 381 740 км2", lang: "Арабский", capCity: "Алжир"},
+                       {name: "Ангола", area:"1 246 700 км2", lang: "Португальский", capCity: "Луанда"},
+                       {name: "Бенин", area:"112 622 км2", lang: "Французский", capCity: "Порто-Ново, Котону	"},
+                       {name: "Ботствана", area:"581 726 км2", lang: "Английский, сетсвана", capCity: "Габороне"},
+                       {name: "Буркино-Фасо", area:"274 000 км2", lang: "Французский", capCity: "Уагадугу"}, 
+                       {name: "Габон", area: "267 668	 км2", lang: "Французский", capCity: "Либервиль"},
+                       {name: "Гана", area: "238 534 км2", lang: "Английский", capCity: "Аккра"},
+                       {name: "Гвинеа", area:"245 857 км2", lang: "Французский", capCity: "Конакри"},
+                       {name: "Демократическая Республика Конго", area:"2 344 858	км2", lang: "Французский", capCity: "Киншаса"},
+                       {name: "Египет", area:"1 001 449	км2", lang: "Арабский", capCity: "Каир"},
+                       {name: "Замбия", area:"752 614 км2", lang: "Английский", capCity: "Лусака"},
+                       {name: "Западная Сахара", area:"267 405 км2", lang: "Арабский", capCity: "Эль-Аюн, Тифарити"},
+                       {name: "Зимбабве", area:"390 757 км2", lang: "Английский", capCity: "Хараре"},
+                       {name: "Кабо-Верде", area:"4033 км2", lang: "Португальский", capCity: "Прая"},
+                       {name: "Камерун", area:"475 442 км2", lang: "Английский, французский", capCity: "Яунде"},
+                       {name: "Кения", area:"580 367	км2", lang: "Английский, суахили", capCity: "Найроби"},
+                       {name: "Коморские острова", area:"2235 км2", lang: "Арабский, коморский, французский", capCity: "Морони"},
+                       {name: "Кот-д’Ивуар", area:"322 460 км2", lang: "Французский", capCity: "Ямусукро"},
+                       {name: "Либерия", area:"111 369 км2", lang: "Английский", capCity: "Монровия"},
+                       {name: "Ливия", area:"1 759 540 км2", lang: "Арабский", capCity: "Триполи"},
+                       {name: "Мавритания", area:"1 030 700 км2", lang: "Арабский", capCity: "Нуакшот"},
+                       {name: "Мадагаскар", area:"587 041	км2", lang: "Малагасийский, французский", capCity: "Антананариву"},
+                       {name: "Мали", area:"1 240 192 км2", lang: "Французский", capCity: "Бамако"},
+                       {name: "Марокко", area:"446 550 км2", lang: "Арабский", capCity: "Рабат"},
+                       {name: "Мозамбик", area:"801 590 км2", lang: "Португальский", capCity: "Мапуту"},
+                       {name: "Намибия", area:"825 418 км2", lang: "Английский", capCity: "Виндхук"},
+                       {name: "Нигер", area:"1 267 000 км2", lang: "Французский", capCity: "Ниамей"},
+                       {name: "Нигерия", area:"923 768 км2", lang: "Английский", capCity: "Абуджа"},
+                       {name: "Республика Конго", area:"342 000 км2", lang: "Французский", capCity: "Браззавиль"},
+                       {name: "Сейшельские острова", area:"451 км2", lang: "Английский, креольский, французский", capCity: "Виктория"},
+                       {name: "Сенегал", area:"196 723 км2", lang: "Французский", capCity: "Дакар"},
+                       {name: "Сомали", area:"637 657 км2", lang: "Сомали, арабский", capCity: "Могадишо"},
+                       {name: "Судан", area:"1 886 068 км2", lang: "Арабский", capCity: "Хартум"},
+                       {name: "Танзания", area:"945 087 км2", lang: "Суахили, английский", capCity: "Дар-Эс-Салам, Додома"},
+                       {name: "Того", area:"56 785 км2", lang: "Французский", capCity: "Ломе"},
+                       {name: "Тунис", area:"163 610 км2", lang: "Арабский", capCity: "Тунис"},
+                       {name: "Уганда", area:"236 040 км2", lang: "Английский, суахили", capCity: "Кампала"},
+                       {name: "Центральная Африка", area:"622 984	 км2", lang: "Санго, французский", capCity: "Банги"},
+                       {name: "Чад", area:"1 284 000	км2", lang: "Арабский, французский", capCity: "Нджамена"},
+                       {name: "Эритрея", area:"117 600 км2", lang: "Арабский, тигринья", capCity: "Асмэра"},
+                       {name: "Эфиопия", area:"1 104 300 км2", lang: "Амхарский", capCity: "Аддис-Абеба"},
+                       {name: "Южная Африка", area:"1 221 037 км2", lang: "Английский, африкаанс и др.", capCity: "Кейптаун, Претория, Блумфотейн"},
+                       {name: "Южный Судан", area:"619 745 км2", lang: "Английский", capCity: "Джуба"},
+                       {name: "1. Гамбия", area:"10 380 км2", lang: "Английский", capCity: "Банжул"},
+                       {name: "2. Гвинеа-Бисау", area:"36 125 км2", lang: "Португальский", capCity: "Бисау"},
+                       {name: "3. Сьерра-Леоне", area:"71 740 км2", lang: "Английский", capCity: "Фритаун"},
+                       {name: "4. Сан-Томе и Принсипи", area:"964 км2", lang: "Португальский", capCity: "Сан-Томе"},
+                       {name: "5. Экваториальная Гвинея", area:"28 051	км2", lang: "Испанский, французский", capCity: "Малабо"},
+                       {name: "6. Джибути", area:"23 200 км2", lang: "Арабский, французский", capCity: "Джибути"},
+                       {name: "7. Руанда", area:"26 798 км2", lang: "Английский, руанда, французский,", capCity: "Кигали"},
+                       {name: "8. Бурунди", area:"27 830 км2", lang: "Кирунди, французский", capCity: "Гитега"},
+                       {name: "9. Малави", area:"118 484 км2", lang: "Английский, чичева", capCity: "Лилонгве"},
+                       {name: "10.Эсватини", area:"17 364 км2", lang: "Английский, свати", capCity: "Мбане, Ломамба"},
+                       {name: "11. Лесото", area:"30 355 км2", lang: "Английский, сесото", capCity: "Масеру"},]
+
                        
       
       // Создаю такое коичество кнопок, которое равняется количеству стран в массиве 
