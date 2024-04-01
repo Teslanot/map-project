@@ -45,8 +45,18 @@ body {
   /* Убираем рамки вокруг поля ввода */
     border: none;
     font-size: x-large;
-
 }
+
+.refreshbut{
+    padding: 10px 20px;
+    font-size: 16px;
+    background: linear-gradient(to right, #FFD700, #FFC500);
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
 .but-div{
     display: flex;
     flex-direction: column;
@@ -56,7 +66,7 @@ body {
 }
 
 .b-n-a{
-    margin-top:1250px;
+    margin-top:1200px;
     margin-left: 13px;
     width: 300px;
     height:330px;  
@@ -67,22 +77,27 @@ body {
     /* overflow: auto; */
 }
 .b-s-a{
-    margin-top:1250px;
-    margin-left: 13px;
+    margin-top:1200px;
+    margin-left: 925px;
     width: 300px;
     height:330px;  
 }
 .b-af{
-    margin-top:1250px;
+    margin-top:1200px;
     margin-left: 885px;
     width: 300px;
     height:330px;  
 }
 .b-as{
-    margin-top:1325px;
+    margin-top:1277px;
     margin-left:80px;
     width: 490px;
     height: 200px;  
+}
+.b-au{
+    margin-top:900px;
+    width: 400px;
+    height:330px;  
 }
 .js-but{
 
@@ -98,25 +113,31 @@ body {
     position: fixed;
     overflow: auto;
     background-color: rgb(246, 249, 205);
+    margin-top:-47px;
 }
 .n-a{
     margin-left:1200px;
-    margin-top:-1250px;
+
 }
 
 .eu{
     margin-left:1300px;
+
 }
 .s-a{
-    margin-left:1200px;
-    margin-top:-1250px;
+    margin-left:1250px;
+
 }
-.af{
+.af{    
     margin-left:1200px;
-    margin-top:-1250px;
+
 }
 .as{
     /* overflow-y:scroll; */
     margin-left:2000px;
-    margin-top:-1325px;
+
+}
+.au{
+    margin-left:1200px;
+
 }

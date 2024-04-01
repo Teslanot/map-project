@@ -1,9 +1,18 @@
+
+
+
 $(function(){
+  const refBut = $('<button class="refreshbut">Назад</button>')
+  refBut.click(refreshPage)
+  function refreshPage(){
+    window.location.reload()
+  }
   // 1 кнопка (Северная Америка)
-    $( "#but-1" ).click(function(){ // задаем функцию при нажатиии на элемент с классом toggle
+  $( "#but-1" ).click(function(){ // задаем функцию при нажатиии на элемент с классом toggle
       $( ".cards-row" ).toggle() //  скрываем, или отображаем все элементы <div>
       $('body').css('backgroundImage', 'url("./img/n-america.jpg")')
-      $('body').css('height','350px')
+
+      $('body').append(refBut)
       //фон
       $('body').append('<div class="text-div n-a"></div>')
 
@@ -47,7 +56,8 @@ $(function(){
     $( "#but-2" ).click(function(){ 
       $( ".cards-row" ).toggle() //  скрываем, или отображаем все элементы <div>
       $('body').css('backgroundImage', 'url("./img/eu.png")')
-      $('body').css('height','1060px')
+
+      $('body').append(refBut)
       // Побелить фон
       $('body').append('<div class="text-div eu"></div>')
 
@@ -153,8 +163,9 @@ $(function(){
     $( "#but-3" ).click(function(){
       $( ".cards-row" ).toggle()
       $('body').css('backgroundImage', 'url("./img/asia.jpg")')
-      $('body').css('height','220px')
       $('body').css('overflow-x','scroll')
+
+      $('body').append(refBut)
       //фон
       $('body').append('<div class="text-div as"></div>')
       $('body').append('<div class="but-div b-as"></div>')
@@ -267,7 +278,8 @@ $(function(){
     $( "#but-4" ).click(function(){
       $( ".cards-row" ).toggle()
       $('body').css('backgroundImage', 'url("./img/s-america.jpg")')
-      $('body').css('height','350px')
+
+      $('body').append(refBut)
       //фон
       $('body').append('<div class="text-div s-a"></div>')
       $('body').append('<div class="but-div b-s-a"></div>')
@@ -311,7 +323,8 @@ $(function(){
     $( "#but-5" ).click(function(){
       $( ".cards-row" ).toggle()
       $('body').css('backgroundImage', 'url("./img/africa.jpg")')
-      $('body').css('height','350px')
+
+      $('body').append(refBut)
       //фон
       $('body').append('<div class="text-div af"></div>')
       $('body').append('<div class="but-div b-af"></div>')
@@ -411,6 +424,51 @@ $(function(){
                        {name: "10.Эсватини", area:"17 364 км2", lang: "Английский, свати", capCity: "Мбане, Ломамба"},
                        {name: "11. Лесото", area:"30 355 км2", lang: "Английский, сесото", capCity: "Масеру"},]
 
+                       
+      
+      // Создаю такое коичество кнопок, которое равняется количеству стран в массиве 
+      for (let i = 0; i < countries.length; i++) {
+        let button = $('<button class="js-but">').appendTo('.but-div')
+        button.text(countries[i].name)
+        button.on('click', (function(country) {
+          return function() {
+            let cName = $('<h3>').appendTo('.text-div')
+            cName.text("Страна: "  + country.name)
+            let cCapCity = $('<p>').appendTo('.text-div')
+            cCapCity.text("Столица: " + country.capCity)            
+            let cArea = $('<p>').appendTo('.text-div')
+            cArea.text("Площадь: " + country.area) 
+            let cLang = $('<p>').appendTo('.text-div')
+            cLang.text("Язык(и): " + country.lang)
+          }
+        })(countries[i]))
+      }
+    })
+    // 6 кнопка(Астралия и Океания)
+    $( "#but-6" ).click(function(){
+      $( ".cards-row" ).toggle()
+      $('body').css('backgroundImage', 'url("./img/australia.jpg")')
+
+      $('body').append(refBut)
+      //фон
+      $('body').append('<div class="text-div au"></div>')
+      $('body').append('<div class="but-div b-au"></div>')
+      let countries = [
+                       {name: "Австралия", area:"7 692 024 км2", lang: "Английский", capCity: "Канберра"},
+                       {name: "Вануату", area:"12 190 км2", lang: "Английский, французский, креольский", capCity: "Порт-Вила"},
+                       {name: "Папуа—Новая Гвинея", area:"462 840 км2", lang: "Английский, ток-писин, хири-моту", capCity: "Порт-Морсби "},
+                       {name: "Соломоновы Острова", area:"28 450 км2", lang: "Английский, креольский", capCity: "Хониара"},
+                       {name: "Фиджи", area:"18 274 км2", lang: "Английский, фиджийский", capCity: "Сува"},
+                       {name: "Кирибати", area:"812 км2", lang: "Английский, кирибати", capCity: "Южная Тарава"},
+                       {name: "Федеративные Штаты Микронезии", area: "702	км2", lang: "английский", capCity: "Паликир"},
+                       {name: "Науру", area:"21 км2", lang: "Науранский, английский", capCity: "нет"},
+                       {name: "Маршалловы Острова", area: "181 км2", lang: "Маршалловый, английский", capCity: "Маджуро"},
+                       {name: "Палау", area:"458 км2", lang: "Палуанский, английский", capCity: "Нгерулмуд"},
+                       {name: "Острова Кука", area:"236,7 км2", lang: "Кукский, английский", capCity: "Аваруа"},
+                       {name: "Французская Полинезия", area:"4 167 км2", lang: "Французский, таитянский", capCity: "Папеэте"},
+                       {name: "Самоа", area:"2 935 км2", lang: "Самоанский, английский", capCity: "Апиа"},
+                       {name: "Тонга", area:"748 км2", lang: "Тонганский, английский", capCity: "Нукуалофа"},
+                       {name: "Тувалу", area:"26 км2", lang: "Тувалу, английский", capCity: "Фунафути"}]
                        
       
       // Создаю такое коичество кнопок, которое равняется количеству стран в массиве 
