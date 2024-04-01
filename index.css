@@ -78,7 +78,12 @@ body {
     width: 300px;
     height:330px;  
 }
-
+.b-as{
+    margin-top:1325px;
+    margin-left:80px;
+    width: 490px;
+    height: 200px;  
+}
 .js-but{
 
     color:white;
@@ -109,4 +114,9 @@ body {
 .af{
     margin-left:1200px;
     margin-top:-1250px;
+}
+.as{
+    /* overflow-y:scroll; */
+    margin-left:2000px;
+    margin-top:-1325px;
 }

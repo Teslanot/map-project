@@ -149,6 +149,120 @@ $(function(){
         })(countries[i]))
       }
     })
+    // 3 кнопка(Азия)
+    $( "#but-3" ).click(function(){
+      $( ".cards-row" ).toggle()
+      $('body').css('backgroundImage', 'url("./img/asia.jpg")')
+      $('body').css('height','220px')
+      $('body').css('overflow-x','scroll')
+      //фон
+      $('body').append('<div class="text-div as"></div>')
+      $('body').append('<div class="but-div b-as"></div>')
+      let countries = [
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "Азербайджан", area:"86 600 км2", lang: "Азербайджанский", capCity: "Баку"},
+                       {name: "Армения", area:"29 800 км2", lang: "Армянский", capCity: "Ереван"},
+                       {name: "Грузия", area:"69 700 км2", lang: "Грузинский", capCity: "Тбилиси"},
+                       {name: "Иордания", area:"92 300 км2", lang: "Арабский", capCity: "Амман"},
+                       {name: "Ирак", area: "437 072 км2", lang: "Арабский и курдский", capCity: "Багдад"},
+                       {name: "Иран", area:"1 648 000 км2", lang: "Персидский", capCity: "Тегеран"},
+                       {name: "Йемен", area: "527 970  км2", lang: "Арабский", capCity: "Сана"},
+                       {name: "Кипр", area:"9 250 км2", lang: "Греческий, турецкий", capCity: "Никосия"},
+                       {name: "Саудовская Аравия", area:"2 218 000 км2", lang: "Арабский", capCity: "Эр-Рияд"},
+                       {name: "Сирия", area:"185 180 км2", lang: "Арабский", capCity: "Дамаск"},
+                       {name: "Казахстан", area:"	2 724 902км2", lang: "Казахский, русский", capCity: "Астана"},
+                       {name: "Кыргызстан", area:"199 951 км2", lang: "Киргизский, русский", capCity: "Бишкек"},
+                       {name: "Таджикистан", area:"142 000 км2", lang: "Таджикский, узбекский", capCity: "Душанбе"},
+                       {name: "Туркменистан", area:"491 200 км2", lang: "Туркменский", capCity: "Ашхабад"},
+                       {name: "Узбекистан", area:"447 400 км2", lang: "Узбекский", capCity: "Ташкент"},
+                       {name: "Афганистан", area:"652 864 км2", lang: "Пушту, дари", capCity: "Кабул"},
+                       {name: "Бангладеш", area:"144 000 км2", lang: "Бенгальский", capCity: "Дакка"},
+                       {name: "Бутан", area:"47 000 км2", lang: "Дзонг-кэ, английский", capCity: "Тхимпху"},
+                       {name: "Индия", area:"3 287 590 км2", lang: "Хинди, английский", capCity: "Нью-Дели"},
+                       {name: "Мальдивы", area:"298 км2", lang: "Дивехи", capCity: "Мале"},
+                       {name: "Непал", area:"140 800 км2", lang: "Непальский", capCity: "Катманду"},
+                       {name: "Пакистан", area:"803 940 км2", lang: "Урду, английский", capCity: "Исламабад"},
+                       {name: "Шри-Ланка", area:"65 610 км2", lang: "Сингальский, тамильский", capCity: "Шри-Джаяварденепура-Котте"},
+                       {name: "Китай", area:"9 596 960 км2", lang: "Китайский", capCity: "Пекин"},
+                       {name: "Северная Корея", area:"120 540 км2", lang: "Корейский", capCity: "Пхеньян"},
+                       {name: "Южная Корея", area:"99 274 км2", lang: "Корейский", capCity: "Сеул"},
+                       {name: "Монголия", area:"1 564 116 км2", lang: "Монгольский", capCity: "Улан-Батор"},
+                       {name: "Япония", area:"377 835 км2", lang: "Японский", capCity: "Токио"},
+                       {name: "Вьетнам", area:"329 560 км2", lang: "Вьетнамский", capCity: "Ханой"},
+                       {name: "Индонезия", area:"1 919 460 км2", lang: "Индонезийский", capCity: "Джакарта"},
+                       {name: "Камбоджа", area:"181 040 км2", lang: "Кхмерский", capCity: "Пномпень"},
+                       {name: "Лаос", area:"236 800 км2", lang: "Лаосский", capCity: "Вьентьян"},
+                       {name: "Малайзия", area:"329 758 км2", lang: "Малайский", capCity: "Куала-Лумпур"},
+                       {name: "Мьянма", area:"678 500 км2", lang: "Бирманский", capCity: "Нейпьидо"},
+                       {name: "Сингапур", area:"692,7 км2", lang: "Английский,китайский,малайский,тамильский", capCity: "Сингапур"},
+                       {name: "Таиланд", area:"514 000 км2", lang: "Тайский", capCity: "Бангкок"},
+                       {name: "Восточный Тимор", area:"15 007 км2", lang: "Тетум, португальский", capCity: "Дили"},
+                       {name: "Филиппины", area:"300 000 км2", lang: "Тагалог, филиппинский, английский", capCity: "Манила"},
+                       {name: "1. Ливан", area:"10 452 км2", lang: "Арабский", capCity: "Бейрут"},
+                       {name: "2. Израиль", area:"20 770 км2", lang: "Иврит и арабский", capCity: "Иерусалим"},                       
+                       {name: "3. Палестина", area:"6020 км2", lang: "Арабский", capCity: "Рамалла"},
+                       {name: "4. Кувейт", area:"17 818 км2", lang: "Арабский", capCity: "Эль-Кувейт"},
+                       {name: "5. Бахрейн", area:"765 км2", lang: "Арабский", capCity: "Манама"},                        
+                       {name: "6. Катар", area:"11 437 км2", lang: "Арабский", capCity: "Доха"},      
+                       {name: "7. ОАЭ", area:"83 600 км2", lang: "Арабский, английский", capCity: "Абу-Даби"},                       
+                       {name: "8. Бруней", area:"5 770 км2", lang: "Малайский", capCity: "Бандар-Сери-Бегаван"},                       
+                      ]
+                       
+      
+      // Создаю такое коичество кнопок, которое равняется количеству стран в массиве 
+      for (let i = 0; i < countries.length; i++) {
+        let button = $('<button class="js-but">').appendTo('.but-div')
+        button.text(countries[i].name)
+        button.on('click', (function(country) {
+          return function() {
+            let cName = $('<h3>').appendTo('.text-div')
+            cName.text("Страна: "  + country.name)
+            let cCapCity = $('<p>').appendTo('.text-div')
+            cCapCity.text("Столица: " + country.capCity)            
+            let cArea = $('<p>').appendTo('.text-div')
+            cArea.text("Площадь: " + country.area) 
+            let cLang = $('<p>').appendTo('.text-div')
+            cLang.text("Язык(и): " + country.lang)
+          }
+        })(countries[i]))
+      }
+    })
     // 4 кнопка(Южная Америка)
     $( "#but-4" ).click(function(){
       $( ".cards-row" ).toggle()
