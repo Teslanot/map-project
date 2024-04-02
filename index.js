@@ -8,8 +8,9 @@ $(function(){
     window.location.reload()
   }
   // 1 кнопка (Северная Америка)
-  $( "#but-1" ).click(function(){ // задаем функцию при нажатиии на элемент с классом toggle
-      $( ".cards-row" ).toggle() //  скрываем, или отображаем все элементы <div>
+  $( "#but-1" ).click(function(){ // задаем функцию при нажатиии на элемент с id but-1
+      $( ".cards-row",).hide() //  скрываем элемент <div> с классом cards-row
+      $('.footer').hide()
       $('body').css('backgroundImage', 'url("./img/n-america.jpg")')
 
       $('body').append(refBut)
@@ -54,7 +55,8 @@ $(function(){
     })
     // 2 кнопка(Европа)
     $( "#but-2" ).click(function(){ 
-      $( ".cards-row" ).toggle() //  скрываем, или отображаем все элементы <div>
+      $( ".cards-row" ).toggle() //  скрываем <div>
+      $('.footer').hide()
       $('body').css('backgroundImage', 'url("./img/eu.png")')
 
       $('body').append(refBut)
@@ -161,9 +163,11 @@ $(function(){
     })
     // 3 кнопка(Азия)
     $( "#but-3" ).click(function(){
-      $( ".cards-row" ).toggle()
+      $( ".cards-row" ).hide()
+      $('.footer').hide()
+
       $('body').css('backgroundImage', 'url("./img/asia.jpg")')
-      $('body').css('overflow-x','scroll')
+      $('body').css('backgroundSize', '80%')
 
       $('body').append(refBut)
       //фон
@@ -276,7 +280,8 @@ $(function(){
     })
     // 4 кнопка(Южная Америка)
     $( "#but-4" ).click(function(){
-      $( ".cards-row" ).toggle()
+      $( ".cards-row" ).hide()
+      $('.footer').hide()
       $('body').css('backgroundImage', 'url("./img/s-america.jpg")')
 
       $('body').append(refBut)
@@ -321,7 +326,8 @@ $(function(){
     })
     // 5 кнопка(Африка)
     $( "#but-5" ).click(function(){
-      $( ".cards-row" ).toggle()
+      $( ".cards-row" ).hide()
+      $('.footer').hide()
       $('body').css('backgroundImage', 'url("./img/africa.jpg")')
 
       $('body').append(refBut)
@@ -446,7 +452,8 @@ $(function(){
     })
     // 6 кнопка(Астралия и Океания)
     $( "#but-6" ).click(function(){
-      $( ".cards-row" ).toggle()
+      $( ".cards-row" ).hide()
+      $('.footer').hide()
       $('body').css('backgroundImage', 'url("./img/australia.jpg")')
 
       $('body').append(refBut)
