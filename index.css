@@ -98,8 +98,9 @@ body {
 }
 .b-as{
     margin-top:750px;
-    width: 370px;
-    height: 200px;  
+    width: 200px;
+    height: 180px;  
+    margin-left: 450px;
 }
 .b-au{
     margin-top:900px;

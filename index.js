@@ -211,6 +211,7 @@ $(function(){
                        {name: "#", area:"#", lang: "#", capCity: "#"},
                        {name: "#", area:"#", lang: "#", capCity: "#"},
                        {name: "#", area:"#", lang: "#", capCity: "#"},
+                       {name: "#", area:"#", lang: "#", capCity: "#"},
                        {name: "Азербайджан", area:"86 600 км2", lang: "Азербайджанский", capCity: "Баку"},
                        {name: "Армения", area:"29 800 км2", lang: "Армянский", capCity: "Ереван"},
                        {name: "Грузия", area:"69 700 км2", lang: "Грузинский", capCity: "Тбилиси"},
