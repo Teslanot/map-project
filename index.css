@@ -2,11 +2,24 @@ body {
     max-width: 100%;
     font-family: Verdana, Geneva, Tahoma, sans-serif ;
     background-image: url('./img/background_map_main.jpg') ;
-    max-height: 100%;
+    background-repeat: no-repeat;
+    background-color: rgb(209, 254, 240);
+    margin: 0;
+    padding: 0; 
 }
 .container{
     margin: 0;
     padding: 0; 
+}
+
+.title-text{
+    display: flex;
+    width: 100%;
+    background-color: black;
+    justify-content: center;
+}
+.in-title-text{
+    color: white;
 }
 
 .cards-row{
@@ -72,13 +85,13 @@ body {
 }
 
 .b-n-a{
-    margin-top:1200px;
-    margin-left: 13px;
-    width: 300px;
-    height:330px;  
+    margin-top:1211px;
+    width: 25%;
+    height:auto;  
     border-left: 1px;
     border-bottom: 1px;
 }
+
 .b-eu{
     width: 200px;
     height:300px;
@@ -122,9 +135,10 @@ body {
     height:100%;
     position: fixed;
     overflow: auto;
-    margin-top:-47px;
+    margin-top:-39px;
     border-left: 3px solid gray;
     padding-left: 10px;
+    text-wrap: wrap;
     animation-name: fill-animation;
     animation-duration: 10s;
     animation-timing-function: linear;
@@ -140,7 +154,7 @@ body {
     100% { background-color: rgb(209, 254, 240); }
 }
 
-.text-div.n-a{
+.n-a{
     margin-left:1200px;
 }
 .eu{
@@ -159,12 +173,13 @@ body {
     margin-left:1200px;
 }
 
-.footer{
-    max-height: 200px;  
-    min-height: 100px;  
-    height: 123px;
-    background-color: black;
-}
-.footer:hover{
-    box-shadow: 1px 1px 1px 1px grey ;
-}
+/* @media screen and (max-width: 1200px){
+    .but-div{
+        width: 40%;
+    }
+    .text-div{
+        width: 100px;
+        margin-left: 10%;
+        position:unset;
+    }
+} */
