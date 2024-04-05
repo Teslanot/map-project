@@ -173,13 +173,51 @@ body {
     margin-left:1200px;
 }
 
-/* @media screen and (max-width: 1200px){
+@media screen and (max-width: 1200px){
+    body{
+        background-size: 300%;
+        background-color: black;
+    }
+    .in-title-text{
+        font-size:20px;
+    }
+    .cards{
+        margin-top: 50%;
+    }
+    .cards-row{
+        flex-grow: 3;
+        display: flex;
+        flex-direction: row;
+    }
     .but-div{
         width: 40%;
     }
     .text-div{
-        width: 100px;
+        width: 20%;
+        height: 10%;
         margin-left: 10%;
-        position:unset;
     }
-} */
+    .card{
+        margin: 0;
+        display: flex;    
+        width: 33%;
+        height: 200px;
+        text-align: center;
+        border: 2px solid rgb(21, 47, 194);  
+    }
+    .main-text{  
+        font-size: 20px;
+    }
+    .top{
+        border: 2px solid rgb(21, 47, 194);  
+    }
+    .bottom{
+        border: 2px solid rgb(21, 47, 194);  
+    }
+    .left{
+        border: 2px solid rgb(21, 47, 194);  
+    }
+    .right{
+        border: 2px solid rgb(21, 47, 194);  
+    }
+}
