@@ -6,6 +6,7 @@ body {
     background-color: rgb(209, 254, 240);
     margin: 0;
     padding: 0; 
+    position: relative;
 }
 .container{
     margin: 0;
@@ -82,46 +83,41 @@ body {
     overflow: auto;
     border: 2px solid gray;
     background: linear-gradient(45deg, lightgreen, aliceblue, cornflowerblue);
+    border-left: 1px;
+    border-bottom: 1px;
+    bottom: 0;
+    position: absolute ;
 }
 
 .b-n-a{
-    margin-top:1211px;
     width: 25%;
     height:auto;  
-    border-left: 1px;
-    border-bottom: 1px;
 }
 
 .b-eu{
+    margin-top: auto;
     width: 200px;
     height:300px;
-    /* overflow: auto; */
 }
 .b-s-a{
-    margin-top:1200px;
-    margin-left: 925px;
-    width: 300px;
-    height:330px;  
+    width: 25%;
+    height:auto;  
 }
 .b-af{
-    margin-top:1200px;
-    margin-left: 885px;
-    width: 300px;
+    width: 25%;
     height:330px;  
+    margin-left: 780px;
 }
 .b-as{
-    margin-top:750px;
-    width: 200px;
-    height: 180px;  
-    margin-left: 450px;
+    width:16%;
+    height:190px; 
+    margin-left: 300px;
 }
 .b-au{
-    margin-top:900px;
-    width: 400px;
+    width: 25%;
     height:330px;  
 }
 .js-but{
-
     color:white;
     background: transparent;
     border: none;
@@ -131,7 +127,7 @@ body {
 
 
 .text-div{
-    width:30%;
+    width:50%;
     height:100%;
     position: fixed;
     overflow: auto;
@@ -167,43 +163,46 @@ body {
     margin-left:1200px;
 }
 .as{
-    margin-left:1200px;
+    width: 400px;
+    height: 20%;
+    margin-left: 650px;
+    position: absolute;
+    bottom: 0;
+    border-top: 2px solid gray;
+    border-right: 2px solid gray;
 }
 .au{
     margin-left:1200px;
 }
-
-@media screen and (max-width: 1200px){
+.still-but {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: lightgray;
+    color: black;
+    border: none;
+    cursor: pointer;
+    display: none;
+ }
+ 
+@media (max-width: 1200px){
     body{
-        background-size: 300%;
         background-color: black;
+        position: relative;
+        min-width: 1200px;
+        
     }
     .in-title-text{
         font-size:20px;
     }
     .cards{
-        margin-top: 50%;
+        margin-left: 10px;
+        margin-right: 10px;
     }
     .cards-row{
         flex-grow: 3;
         display: flex;
         flex-direction: row;
-    }
-    .but-div{
-        width: 40%;
-    }
-    .text-div{
-        width: 20%;
-        height: 10%;
-        margin-left: 10%;
-    }
-    .card{
-        margin: 0;
-        display: flex;    
-        width: 33%;
-        height: 200px;
-        text-align: center;
-        border: 2px solid rgb(21, 47, 194);  
+        justify-content:center;
     }
     .main-text{  
         font-size: 20px;
@@ -220,4 +219,31 @@ body {
     .right{
         border: 2px solid rgb(21, 47, 194);  
     }
+    .card{
+        margin: 0;
+        display: flex;    
+        width: 20%;
+        height: 200px;
+        text-align: center;
+        border: 2px solid rgb(21, 47, 194);  
+    }    
+    .still-but{
+        display: unset;
+    }
+    .but-div{
+        width: 25%;
+        height: 20%;
+        bottom: 0;
+        position: absolute;
+        margin:0
+    }
+    .text-div{
+        width: 25%;
+        height: 20%;
+        margin-left: 80%;
+        position: absolute;
+        bottom: 0;
+        border-top: 2px solid gray;
+    }
+
 }

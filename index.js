@@ -12,14 +12,25 @@ $(function(){
       $( ".cards-row",).hide() //  скрываем элемент <div> с классом cards-row
       $('.title-text').hide()
       $('body').css('backgroundImage', 'url("./img/n-america.jpg")')
+      $('body').css( 'minWidth','1200px')
+      $('body').css( 'minHeight','1600px')
       // $('body').css('min-width','1600px')
 
+
       $('body').append(refBut)
-      //фон
+
+      $('<button class="still-but">Скрыть/Показать дивы</button>').appendTo('body')
+      // кнопка сокрытия/раскрытия
+      $('.still-but').click(function() {
+        $('.text-div, .but-div').toggle()
+      })      
       $('body').append('<div class="text-div n-a"></div>')
 
-
       $('body').append('<div class="but-div b-n-a"></div>')
+
+
+
+     
       let countries = [
                        {name: "США", area:"9 519 431 км2", lang: "Английский", capCity: "Вашигтон"},
                        {name: "Канада", area:"9 984 670 км2", lang: "Английский, Французкий", capCity: "Оттава"},
@@ -59,6 +70,8 @@ $(function(){
       $( ".cards-row" ).toggle() //  скрываем <div>
       $('.title-text').hide()
       $('body').css('backgroundImage', 'url("./img/eu.png")')
+      $('body').css( 'minHeight','1075px')
+      $('body').css( 'minWidth','1350px')
 
       $('body').append(refBut)
       // Побелить фон
@@ -168,7 +181,8 @@ $(function(){
       $('.title-text').hide()
 
       $('body').css('backgroundImage', 'url("./img/asia.jpg")')
-      $('body').css('backgroundSize', '80%')
+      $('body').css( 'minHeight','1545px')
+      $('body').css( 'minWidth','1950px')
 
       $('body').append(refBut)
       //фон
@@ -285,6 +299,8 @@ $(function(){
       $( ".cards-row" ).hide()
       $('.title-text').hide()
       $('body').css('backgroundImage', 'url("./img/s-america.jpg")')
+      $('body').css( 'minHeight','1600px')
+      $('body').css( 'minWidth','1200px')
 
       $('body').append(refBut)
       //фон
@@ -331,6 +347,8 @@ $(function(){
       $( ".cards-row" ).hide()
       $('.title-text').hide()
       $('body').css('backgroundImage', 'url("./img/africa.jpg")')
+      $('body').css( 'minHeight','1600px')
+      $('body').css( 'minWidth','1200px')
 
       $('body').append(refBut)
       //фон
@@ -457,6 +475,8 @@ $(function(){
       $( ".cards-row" ).hide()
       $('.title-text').hide()
       $('body').css('backgroundImage', 'url("./img/australia.jpg")')
+      $('body').css( 'minHeight','1345px')
+      $('body').css( 'minWidth','1250px')
 
       $('body').append(refBut)
       //фон
