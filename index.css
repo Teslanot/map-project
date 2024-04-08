@@ -95,7 +95,7 @@ body {
 }
 
 .b-eu{
-    margin-top: auto;
+    bottom: 340px;
     width: 200px;
     height:300px;
 }
@@ -124,10 +124,13 @@ body {
     color: black;
     font-size: large;
 }
+.js-but:hover{
+    background-color: yellowgreen;
+}
 
 
 .text-div{
-    width:50%;
+    width:30%;
     height:100%;
     position: fixed;
     overflow: auto;
@@ -155,6 +158,7 @@ body {
 }
 .eu{
     margin-left:1300px;
+    width:20%
 }
 .s-a{
     margin-left:1250px;
