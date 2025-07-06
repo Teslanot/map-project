@@ -31,8 +31,12 @@
 }
 
 .gradient-bg {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    position: relative;
+  background: 
+    linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%),
+    url('/path/to/noise.png');
+  background-size: cover;
+  background-blend-mode: overlay;
+  position: relative;
 }
 
 .search-box {
