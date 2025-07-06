@@ -15,6 +15,7 @@ const closeModal = document.getElementById('close-modal');
 let currentContinent = '';
 let currentCountries = [];
 
+//БЛОК С АНИМАЦИЯМИ
 function fadeIn(element, duration = 500) {
     element.style.opacity = '0';
     element.style.transform = 'translateY(20px)';
@@ -52,6 +53,7 @@ function animateCards() {
     });
 }
 
+//Блок с обработчиками событий
 continentCards.forEach(card => {
     card.addEventListener('mouseenter', () => {
         card.style.transform = 'translateY(-10px) scale(1.05)';
@@ -64,10 +66,15 @@ continentCards.forEach(card => {
     });
 });
 
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
 
 continentCards.forEach(card => {
     card.addEventListener('click', () => {
         const continent = card.dataset.continent;
+        topFunction();        
         showContinent(continent);
     });
 });
