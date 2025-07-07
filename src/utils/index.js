@@ -209,6 +209,8 @@ function showCountryModal(country) {
     if (!countryModal) return;
     
     document.getElementById('modal-country-name').textContent = country.name;
+    document.getElementById('country-flag-bg').style.backgroundImage =
+    `url('https://flagcdn.com/w320/${country.code.toLowerCase()}.png')`;    
     document.getElementById('modal-country-flag').innerHTML = `
         <div class="w-16 h-12 bg-gradient-to-r from-blue-400 to-purple-400 rounded flex items-center justify-center text-white font-bold text-lg">
             ${country.code || country.name.substring(0, 2)}
@@ -265,7 +267,8 @@ function closeCountryModal() {
 function searchCountries(query) {
     const filtered = currentCountries.filter(country => 
         country.name.toLowerCase().includes(query.toLowerCase()) ||
-        country.capital.toLowerCase().includes(query.toLowerCase())
+        country.capital.toLowerCase().includes(query.toLowerCase()) || 
+        country.code.toLowerCase().includes(query.toLowerCase())
     );
     
     renderCountries(filtered);
@@ -277,7 +280,8 @@ function globalSearch(query) {
     Object.entries(countries).forEach(([continent, countriesList]) => {
         const matches = countriesList.filter(country => 
             country.name.toLowerCase().includes(query.toLowerCase()) ||
-            country.capital.toLowerCase().includes(query.toLowerCase())
+            country.capital.toLowerCase().includes(query.toLowerCase()) || 
+            country.code.toLowerCase().includes(query.toLowerCase())
         );
         
         if (matches.length > 0) {

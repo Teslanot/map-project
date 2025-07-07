@@ -118,6 +118,11 @@
     font-size: 12px;
 }
 
+#country-flag-bg {
+  filter: brightness(0.4) blur(2px);
+}
+
+
 .scrollbar-hide {
     scrollbar-width: none;
     -ms-overflow-style: none;
