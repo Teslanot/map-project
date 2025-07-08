@@ -4,6 +4,16 @@
     font-family: 'Inter', sans-serif;
 }
 
+.light-mode {
+    background: linear-gradient(
+        135deg,
+        #375dda 0%,
+        #63c0eb 50%,
+        #72cfe6 100%
+    );
+    color: #1a202c;
+}
+
 .continent-card {
     background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
     backdrop-filter: blur(10px);
@@ -22,6 +32,36 @@
     backdrop-filter: blur(15px);
     border: 1px solid rgba(255,255,255,0.1);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.country-label {
+    color: #bfdbfe;
+}
+
+.light-mode .country-label {
+  color: #333e51;
+}
+
+.country-label-100 {
+  color: #dbeafe;
+}
+
+.light-mode .country-label-100 {
+  color: #1e3a8a;
+}
+
+.gradient-heading {
+  background: linear-gradient(to right, white, #bfdbfe, #c4b5fd);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.light-mode .gradient-heading {
+  background: linear-gradient(to right, #1a202c, #2563eb, #6b21a8); 
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .country-card:hover {

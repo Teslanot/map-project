@@ -11,6 +11,8 @@ const continentTitle = document.getElementById('continent-title');
 const countriesGrid = document.getElementById('countries-grid');
 const countrySearch = document.getElementById('country-search');
 const closeModal = document.getElementById('close-modal');
+const toggleModeBtn = document.getElementById('toggle-mode-btn');
+const toggleButtons = document.querySelectorAll('.theme-toggle');
 
 let currentContinent = '';
 let currentCountries = [];
@@ -52,6 +54,18 @@ function animateCards() {
         }, 100 * index);
     });
 }
+
+toggleButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.body.classList.toggle('light-mode');
+
+    toggleButtons.forEach(button => {
+      const icon = button.querySelector('i');
+      icon.classList.toggle('fa-moon');
+      icon.classList.toggle('fa-sun');
+    });
+  });
+});
 
 //Блок с обработчиками событий
 continentCards.forEach(card => {
@@ -173,19 +187,19 @@ function createCountryCard(country) {
     
     card.innerHTML = `
         <div class="flex items-center space-x-4 mb-4">
-            <div class="country-flag w-12 h-8 bg-gradient-to-r from-blue-400 to-purple-400 rounded flex items-center justify-center text-white font-bold">
+            <div class="country-flag w-12 h-8 bg-gradient-to-r from-blue-400 to-purple-400 rounded flex items-center justify-center font-bold">
                 ${country.code || country.name.substring(0, 2)}
             </div>
-            <h3 class="text-xl font-bold text-white">${country.name}</h3>
+            <h3 class="text-xl font-bold">${country.name}</h3>
         </div>
         <div class="space-y-2 text-sm">
             <div class="flex justify-between">
-                <span class="text-blue-200">Столица:</span>
-                <span class="text-white font-semibold">${country.capital}</span>
+                <span class="country-label">Столица:</span>
+                <span class="font-semibold">${country.capital}</span>
             </div>
             <div class="flex justify-between">
-                <span class="text-blue-200">Население:</span>
-                <span class="text-white font-semibold">${country.population}</span>
+                <span class="country-label">Население:</span>
+                <span class="font-semibold">${country.population}</span>
             </div>
         </div>
     `;
